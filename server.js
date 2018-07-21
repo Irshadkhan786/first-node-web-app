@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs     = require('hbs');
 const login = require('./routes/service.js');
+const port = process.env.port || 3000;
 hbs.registerPartials(__dirname + "/views/partials");
 hbs.registerHelper("getCurrentYear",()=>{
     return new Date().getFullYear();
@@ -52,6 +53,6 @@ app.get('/bad',(req,res)=>{
         desc: 'Resorce not found'
     })
 })
-app.listen(3000,()=>{
-console.log('Server is running on 3000 port');
+app.listen(port,()=>{
+console.log(`Server is running on ${port} port`);
 })
