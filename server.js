@@ -10,15 +10,6 @@ var app = express();
 
 app.set('view engine','hbs');
 app.use(express.static(__dirname+'/public-test'));
-/* app.use((req,res,next)=>{
-    res.render('middleware.hbs',{
-        'pageDate': {
-            title: 'Middle ware Page',
-            body: 'I am Middel ware Page'
-        }, 
-    })
-    //next();
-}) */
 
 app.get('/',(request,response)=>{
     response.render('home.hbs',{
