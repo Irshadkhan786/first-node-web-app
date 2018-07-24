@@ -33,6 +33,15 @@ app.get("/about",(req,res)=>{
     })
     
 });
+
+app.get("/project",(req,res)=>{
+    res.render('project.hbs',{
+        pageDate : {
+            title: 'Project page',
+            body: 'I am body of project page'
+        }
+    })
+})
 /* app.get("/getUser",(req,res)=>{
   var userData =  login.getUser(1);
   res.send(userData);
